@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minecraft:appleEnchanted"//附魔金苹果
+    },
+    
+    "components": {
+      "minecraft:hand_equipped": false,//手中所拿方式，fasle为竖方向
+      "minecraft:stacked_by_data": true,//物品可在物品栏中堆叠（如重复64个为一组）
+      "minecraft:use_duration": 32,
+      "minecraft:foil": true,//有附魔光效
+      "minecraft:food": {
+        "nutrition": 4,
+        "saturation_modifier": "supernatural",
+        "can_always_eat": true,//可以在饥饿度为满时使用
+        "effects": [//添加效果
+          {
+            "name": "regeneration",//效果名为药水效果
+            "chance": 1.0,//获得效果的几率
+            "duration": 30,//持续时间30刻
+            "amplifier": 4//效果等级
+          },
+          {
+            "name": "absorption",
+            "chance": 1.0,
+            "duration": 120, // 2 * 60
+            "amplifier": 3
+          },
+          {
+            "name": "resistance", // damage resistance
+            "chance": 1.0,
+            "duration": 300,
+            "amplifier": 0
+          },
+          {
+            "name": "fire_resistance",
+            "chance": 1.0,
+            "duration": 300,
+            "amplifier": 0
+          }
+        ]
+      }
+    }
+  }
+}

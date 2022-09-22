@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10",//版本号
+  "minecraft:item": {//定义这为一个物品
+    "description": {
+      "identifier": "minecraft:apple"//定义物品ID
+    },
+
+    "components": {//组件
+      "minecraft:use_duration": 32,//定义使用该物品的耗时为32刻（20刻是1s）
+      "minecraft:food": {//定义为food类
+        "nutrition": 4,//可恢复饥饿值
+        "saturation_modifier": "low"//先于饥饿值扣除的饱和度值
+      }
+    }
+  }
+}
